@@ -1,0 +1,1 @@
+g++ -o zk1 zk_c_t.cpp -I./c/inbin/include/c-client-src/ ./c/inbin/lib/libzookeeper_st.so
