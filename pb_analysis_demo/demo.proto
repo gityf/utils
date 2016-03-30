@@ -1,0 +1,37 @@
+package demo;
+
+enum AuctionType {
+  FIRST_PRICE = 1;
+  SECOND_PRICE = 2;
+  FIXED_PRICE = 3;
+}
+
+message VarintMsg {
+  required int32  argI32  = 1;
+  required int64  argI64  = 2;
+  required uint32 argUI32 = 3;
+  required uint64 argUI64 = 4;
+  required sint32 argSI32 = 5;
+  required sint64 argSI64 = 6;
+  repeated bool   argBool = 7;
+  optional AuctionType argEnum = 8;
+}
+
+message Bit64 {
+  required fixed64  argFixed64  = 1;
+  required sfixed64 argSFixed64 = 2;
+  required double   argDouble   = 3;
+}
+
+message Bit32 {
+  required fixed32  argFixed32  = 1;
+  required sfixed32 argSFixed32 = 2;
+  required float    argFloat    = 3;
+}
+
+message LenPayload {
+  repeated string argStrList = 1;
+  optional VarintMsg argVarintMsg = 2;
+  optional Bit64 argBit64 = 3;
+  optional Bit32 argBit32 = 4;
+}
